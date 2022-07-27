@@ -8,7 +8,7 @@
 }
 :root{
     --color-primary:black;
-    --color-secondary:lightgreen;
+    --color-secondary:rgb(144, 153, 238);
     --color-white:white;
     --color-grey0:rgb(211, 211, 211);
     --color-grey1:rgb(182, 182, 182);
@@ -16,15 +16,16 @@
     --color-grey3:rgb(80, 80, 80);
     --color-grey4:rgb(66, 66, 66);
     --br-sm-2m-2: 14px;
-    --box-shadow-1: 0 3px 15px rgba(0, 0, 0, .3);
+    --box-shadow1: 0 3px 15px rgba(0, 0, 0, .3);
+
 }
 
 body{
     font-family: 'Poppins', sans-serif;
-    background-color: var(--color-primary);
+    background-color:var(--color-primary);
     font-size: 1.1rem;
-    color:var(--color-white);
     transition:all .4s ease-in-out;
+
 }
 
 a{
@@ -36,8 +37,9 @@ a{
 
 header{
     height:100vh;
-    color: var(--color-white);
+    color: --color-white;
     overflow:hidden;
+
 }
 
 section{
@@ -47,6 +49,7 @@ section{
     left:0;
     top: 0;
     padding: 3rem 18rem;
+ 
 }
 .section{
     transform: translateY(-100%) scale(0);
@@ -77,45 +80,41 @@ section{
     display: none;
     transform: translateY(0)scale(1);
 }
-//controlls
+
 .controls{
     position: fixed;
     z-index:10;
     top: 50%;
-    right: 3%;
+    right: 4%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    transform: translate;
+    transform: translateY(-50%);
     .active-btn{
         background-color: var(--color-secondary)!important;
-        transition:all .4s ease-in-out;
+        transition:all .4 ease-in-out;
         i{
-            color: var(--color-white)!important;
+            color:var(--color-white) !important;
         }
-    }
 
-    .controls{
+    }
+    .control{
         padding: 1rem;
         cursor: pointer;
-        background-color: var(--color-grey4);
+        background-color:var(--color-grey3);
         width: 55px;
         height: 55px;
         border-radius: 50%; 
         display: flex;
         justify-content: center;
         align-items:center;
-        margin: .7rem 0;
-        box-shadow: var(--box-shadow-1);
+        margin: .5rem 0;
+        box-shadow: var(--box-shadow1);
         i{
             font-size:1.2rem;
-            color: var(--color-grey-2);
+            color: var(--color-white);
             pointer-events:none;
         }
-
-
     }
-   
-    
 }   
